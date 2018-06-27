@@ -1,4 +1,4 @@
-# aws-cda-tips
+# AWS Certified Developer – Associate (Tips)
 
 ## VPC
 
