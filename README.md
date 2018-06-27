@@ -1,4 +1,4 @@
-# AWS Certified Developer – Associate (Tips)
+# AWS Certified Developer – Associate tips
 
 ## VPC
 
