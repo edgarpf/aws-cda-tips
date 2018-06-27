@@ -37,7 +37,7 @@
 
 - 1 million requests are allowed in the free tier.
 
-- the maximum visibility timeout is 12 hours.
+- The maximum visibility timeout is 12 hours.
 
 - There is no limit on the number of queues.
 
