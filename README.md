@@ -29,6 +29,14 @@
 
 - Name, type, and value must not be empty or null and the message body shouldn't be empty or null either.
 
+- SNS guarantee message delivery to SQS.
+
+- Topic names are limited to 256 characters.
+
+- The time period available for confirmation is 3 days.
+
+- Once a message has been published to SNS, it can not be recalled.
+
 ## DynamoDB
 
 -  An atomic counter allows all write requests to be applied in the order they are received by incrementing or decrementing the attribute value.
@@ -75,6 +83,10 @@
 
 - It guarantees delivery order of messages/tasks.
 
+- Video encoding is one of the major use cases for using SWF.
+
+- Domains are the containers called for segregating application resources.
+
 ## SQS
 
 - If long polling is enabled the reader will listen to the queue until a message is available or until timeout.
@@ -94,3 +106,12 @@
 - SQS max message size is 256KB. To send bigger messages use the Amazon SQS Extended Client Library for Java.
 
 - Long polling makes it inexpensive to retrieve messages from your Amazon SQS queue as soon as the messages are available. Using long polling might reduce the cost of using SQS, because you can reduce the number of empty receives To enable long polling you need to set the value of ReceiveMessageWaitTimeSeconds to greater than 0 and less than or equal to 20 seconds.
+
+## Cloud Formation
+
+- AWS CloudFormation assume default template version if one is not explicitly mentioned in a CloudFormation template.
+- It provides a set of Python helper scripts that you can use to install software and start services on an Amazon EC2 instance in your stack.
+
+- You can use intrinsic functions only in specific parts of a template. Currently, you can use intrinsic functions in resource properties, outputs, metadata attributes, and update policy attributes. You can also use intrinsic functions to conditionally create stack resources.
+
+- Resources is the only mandatory field.
