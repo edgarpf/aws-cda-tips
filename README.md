@@ -29,9 +29,57 @@
 
 - Name, type, and value must not be empty or null and the message body shouldn't be empty or null either.
 
+## DynamoDB
+
+-  An atomic counter allows all write requests to be applied in the order they are received by incrementing or decrementing the attribute value.
+
+- For write capacity , the rule is to divide the item size by 1KB.
+
+- For read capacity, the rule is to divide the item size by 4KB. 
+
+- 256 is the maximum number of tables per region.
+
+- Query and Scan both support eventual consistent reads.
+
+- 5 local and 5 global secondary indexes are allowed , which gives a maximum of 10 per table.
+
+- The BatchGetItem operation returns the attributes of one or more items from one or more tables. You identify requested items by primary key.
+
+- A Query operation uses the primary key of a table or a secondary index to directly access items from that table or index.
+
+-  A local secondary index has the same partition key as the primary key and the global secondary index can have different partition and sort key.
+
+- DynamoDB does not allow secondary index limit increase.
+
+- To help clients coordinate writes to data items, DynamoDB supports conditional writes for PutItem, DeleteItem, and UpdateItem operations. With a conditional write, an operation succeeds only if the item attributes meet one or more expected conditions; otherwise it returns an error.
+
+- 5 global security indexes are allowed.
+
+- All scalar data types can be indexed.
+
+- An index can not be modified after creation.
+
+- 400KB is the maximum size of an item in DynamoDB.
+
+- 10GB is maximum limit for the size of an item collection in DynamoDB.
+
+- 100 is the smallest amount of reserved capacity that can be purchased for DynamoDB.
+
+- There is no limit to the number of attributes an item can have in DynamoDB
+
+## SWF
+
+- The maximum number of SWF domains allowed in an AWS account is 100.
+
+- a SWF workflow task or task execution can live up to 1 year.
+
+- It guarantees delivery order of messages/tasks.
+
 ## SQS
 
 - If long polling is enabled the reader will listen to the queue until a message is available or until timeout.
+
+- SQS guarantees delivery but there can be duplicates.
 
 - AWS SQS is PCI DSS certified.
 
