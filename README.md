@@ -43,11 +43,21 @@
 
 -  An atomic counter allows all write requests to be applied in the order they are received by incrementing or decrementing the attribute value.
 
+- Reads of a DynamoDB table are eventual consistency, unless you specify otherwise.
+
 - For write capacity , the rule is to divide the item size by 1KB.
 
 - For read capacity, the rule is to divide the item size by 4KB. 
 
+- Humans can not perform a decision task.
+
 - 256 is the maximum number of tables per region.
+
+- One DynamoDB read capacity unit represents one strongly consistent read per second, for an item up to 4 KB in size. 
+
+- UpdateTable does not consume capacity units.
+
+ You exceed your maximum allowed provisioned throughput for a table or for one or more global secondary indexes.
 
 - Query and Scan both support eventual consistent reads.
 
@@ -58,6 +68,8 @@
 - A Query operation uses the primary key of a table or a secondary index to directly access items from that table or index.
 
 -  A local secondary index has the same partition key as the primary key and the global secondary index can have different partition and sort key.
+
+- DynamoDB uses conditional writes for consistency.
 
 - DynamoDB does not allow secondary index limit increase.
 
@@ -95,6 +107,8 @@
 
 - SQS guarantees delivery but there can be duplicates.
 
+- 30 seconds is the default timeout for visibility queue in SQS.
+
 - AWS SQS is PCI DSS certified.
 
 - 1 million requests are allowed in the free tier.
@@ -113,6 +127,8 @@
 
 - AWS CloudFormation assume default template version if one is not explicitly mentioned in a CloudFormation template.
 - It provides a set of Python helper scripts that you can use to install software and start services on an Amazon EC2 instance in your stack.
+
+- There are no limits to the number of templates.
 
 - You can use intrinsic functions only in specific parts of a template. Currently, you can use intrinsic functions in resource properties, outputs, metadata attributes, and update policy attributes. You can also use intrinsic functions to conditionally create stack resources.
 
