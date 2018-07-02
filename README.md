@@ -25,6 +25,8 @@
 
 - 100 is the maximum number of S3 buckets by default allowed per AWS account.
 
+- S3 bucket policies require a Principal be defined.
+
 ## SNS
 
 - Name, type, and value must not be empty or null and the message body shouldn't be empty or null either.
