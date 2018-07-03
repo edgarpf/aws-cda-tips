@@ -19,13 +19,19 @@
 
 - Any objects uploaded prior to versioning will have the version ID as NULL.
 
+- Multi-part upload API allows you to stop and resume uploads
+
 - Multi-Object Delete can be used to delete a large number of objects.
 
 - x-amz-server-side-encryption will cause an object to be SSE.
 
 - 100 is the maximum number of S3 buckets by default allowed per AWS account.
 
+- By default, all Amazon S3 resources—buckets, objects, and related subresources (for example, lifecycleconfiguration and website configuration)—are private.
+
 - S3 bucket policies require a Principal be defined.
+
+- To host your static website, you configure an Amazon S3 bucket for website hosting and then upload your website content to the bucket. The website is then available at the region-specific website endpoint of the bucket: <bucket-name>.s3-website-<AWS-region>.amazonaws.com
 
 ## SNS
 
@@ -49,9 +55,15 @@
 
 - For read capacity, the rule is to divide the item size by 4KB. 
 
+- A DynamoDB table can contain 5 local secondary indexes on a table.
+
+- DynamoDB uses optimistic concurrency control.
+
 - Humans can not perform a decision task.
 
 - 256 is the maximum number of tables per region.
+
+- The cumulative number of tables and indexes in the CREATING, DELETING or UPDATING state cannot exceed 10.
 
 - One DynamoDB read capacity unit represents one strongly consistent read per second, for an item up to 4 KB in size. 
 
