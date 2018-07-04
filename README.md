@@ -23,6 +23,12 @@
 
 - Multi-Object Delete can be used to delete a large number of objects.
 
+- Parts of a multi-part upload will not be completed until the "complete" request has been called which puts all the parts of the file together.
+
+- S3 object key names are stored lexicographically.
+
+- A benefit of multi-part upload is that you can upload a file as it is being created.
+
 - x-amz-server-side-encryption will cause an object to be SSE.
 
 - 100 is the maximum number of S3 buckets by default allowed per AWS account.
@@ -39,6 +45,8 @@
 
 - SNS guarantee message delivery to SQS.
 
+- SNS send to endpoints a JSON document with parameters like Message, Signature, Subject, Type.
+
 - Topic names are limited to 256 characters.
 
 - The time period available for confirmation is 3 days.
@@ -49,9 +57,13 @@
 
 -  An atomic counter allows all write requests to be applied in the order they are received by incrementing or decrementing the attribute value.
 
+- An item stored in a DynamoDB can contain any number of attributes associated to it.
+
+ - DynamoDB does not support cross table joins
+
 - Reads of a DynamoDB table are eventual consistency, unless you specify otherwise.
 
-- For write capacity , the rule is to divide the item size by 1KB.
+- For write capacity, the rule is to divide the item size by 1KB.
 
 - For read capacity, the rule is to divide the item size by 4KB. 
 
@@ -72,6 +84,8 @@
  You exceed your maximum allowed provisioned throughput for a table or for one or more global secondary indexes.
 
 - Query and Scan both support eventual consistent reads.
+
+- A local secondary index is an index that has the same hash key as the table, but a different range key.
 
 - 5 local and 5 global secondary indexes are allowed , which gives a maximum of 10 per table.
 
@@ -95,6 +109,8 @@
 
 - 400KB is the maximum size of an item in DynamoDB.
 
+- By default, AWS allows you to have 256 DynamoDB tables per account, per region. 
+
 - 10GB is maximum limit for the size of an item collection in DynamoDB.
 
 - 100 is the smallest amount of reserved capacity that can be purchased for DynamoDB.
@@ -105,7 +121,7 @@
 
 - The maximum number of SWF domains allowed in an AWS account is 100.
 
-- a SWF workflow task or task execution can live up to 1 year.
+- A SWF workflow task or task execution can live up to 1 year.
 
 - It guarantees delivery order of messages/tasks.
 
@@ -116,6 +132,8 @@
 ## SQS
 
 - If long polling is enabled the reader will listen to the queue until a message is available or until timeout.
+
+- Messages will be delivered one or more times, and message delivery order is indeterminate.
 
 - SQS guarantees delivery but there can be duplicates.
 
