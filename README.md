@@ -59,7 +59,9 @@
 
 - An item stored in a DynamoDB can contain any number of attributes associated to it.
 
- - DynamoDB does not support cross table joins
+- DynamoDB does not support cross table joins
+
+- It supports two types of primary keys: Hash and hasn and Range.
 
 - Reads of a DynamoDB table are eventual consistency, unless you specify otherwise.
 
@@ -157,6 +159,8 @@
 
 - AWS CloudFormation assume default template version if one is not explicitly mentioned in a CloudFormation template.
 - It provides a set of Python helper scripts that you can use to install software and start services on an Amazon EC2 instance in your stack.
+
+- The valid parts of the Cloud Formation template are parameters, outputs and resources.
 
 - There are no limits to the number of templates.
 
