@@ -1,5 +1,9 @@
 # AWS Certified Developer – Associate tips
 
+## General
+
+- Default region is us-east-1
+
 ## VPC
 
 - There can be only one route table per subnet.
@@ -45,6 +49,8 @@
 
 - SNS guarantee message delivery to SQS.
 
+- Subject, Message and Format are valid arguments for an SNS Publish request.
+
 - SNS send to endpoints a JSON document with parameters like Message, Signature, Subject, Type.
 
 - Topic names are limited to 256 characters.
@@ -57,7 +63,13 @@
 
 -  An atomic counter allows all write requests to be applied in the order they are received by incrementing or decrementing the attribute value.
 
+- The BatchGetItem operation returns the attributes of one or more items from one or more tables.
+
+- Set a smaller page size for the scan can be used to minimize the impact of a scan on a table’s provisioned throughput.
+
 - An item stored in a DynamoDB can contain any number of attributes associated to it.
+
+- Strongly consistent reads uses more provisioned read throughput than eventually consistent reads.
 
 - DynamoDB does not support cross table joins
 
@@ -73,6 +85,8 @@
 
 - DynamoDB uses optimistic concurrency control.
 
+- DynamoDB uses conditional writes for consistency.
+
 - Humans can not perform a decision task.
 
 - 256 is the maximum number of tables per region.
@@ -83,7 +97,7 @@
 
 - UpdateTable does not consume capacity units.
 
- You exceed your maximum allowed provisioned throughput for a table or for one or more global secondary indexes.
+- You exceed your maximum allowed provisioned throughput for a table or for one or more global secondary indexes.
 
 - Query and Scan both support eventual consistent reads.
 
@@ -92,6 +106,8 @@
 - 5 local and 5 global secondary indexes are allowed , which gives a maximum of 10 per table.
 
 - The BatchGetItem operation returns the attributes of one or more items from one or more tables. You identify requested items by primary key.
+
+- "ProvisionedThroughputExceededException" error is caused due to the following reason: You exceeded your maximum allowed provisioned throughput for a table or for one or more global secondary indexes. 
 
 - A Query operation uses the primary key of a table or a secondary index to directly access items from that table or index.
 
@@ -125,6 +141,10 @@
 
 - A SWF workflow task or task execution can live up to 1 year.
 
+- SWF uses deciders and workers to complete tasks.
+
+- SWF tasks are assigned once and never duplicated.
+
 - It guarantees delivery order of messages/tasks.
 
 - Video encoding is one of the major use cases for using SWF.
@@ -138,6 +158,8 @@
 - Messages will be delivered one or more times, and message delivery order is indeterminate.
 
 - SQS guarantees delivery but there can be duplicates.
+
+- Dead letter queues handles unsuccessfully-processed messages in SQS.
 
 - 30 seconds is the default timeout for visibility queue in SQS.
 
