@@ -49,6 +49,10 @@
 
 - SNS guarantee message delivery to SQS.
 
+- A JSON object containing MessageId, unsubscribeURL, Subjec is the format of structured notification messages sent by Amazon SNSt, Message and other values.
+
+- 100,000 is the maximum number of topics allowed per account in SNS.
+
 - Subject, Message and Format are valid arguments for an SNS Publish request.
 
 - SNS send to endpoints a JSON document with parameters like Message, Signature, Subject, Type.
@@ -154,6 +158,10 @@
 ## SQS
 
 - If long polling is enabled the reader will listen to the queue until a message is available or until timeout.
+
+- SQS long polling costs the same that short polling
+
+-  256 characters  is the maximum length of a topic name in SNS.
 
 - Messages will be delivered one or more times, and message delivery order is indeterminate.
 
