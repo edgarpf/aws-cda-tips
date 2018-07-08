@@ -10,6 +10,8 @@
 
 - There can be only one route table per subnet.
 
+- You can create 200 subnets per vpc.
+
 ## EBS
 
 - 10 GiB is the size limit for volumes in instances that are based on Amazon Instance Store backed AMI’s.
@@ -144,6 +146,10 @@
 
 - "ProvisionedThroughputExceededException" error is caused due to the following reason: You exceeded your maximum allowed provisioned throughput for a table or for one or more global secondary indexes. 
 
+- Each table can have up to 5 local secondary indexes.
+
+- There is no limit to a table size.
+
 - A Query operation uses the primary key of a table or a secondary index to directly access items from that table or index.
 
 -  A local secondary index has the same partition key as the primary key and the global secondary index can have different partition and sort key.
@@ -178,7 +184,11 @@
 
 - A SWF workflow task or task execution can live up to 1 year.
 
+- Flow Framework helps in developing Amazon SWF based applications.
+
 - SWF uses deciders and workers to complete tasks.
+
+- 1000 is the maximum number of open activity tasks.
 
 - SWF tasks are assigned once and never duplicated.
 
@@ -232,6 +242,8 @@
 
 - AWS CloudFormation assume default template version if one is not explicitly mentioned in a CloudFormation template.
 - It provides a set of Python helper scripts that you can use to install software and start services on an Amazon EC2 instance in your stack.
+
+- 60 is the limit to the number of parameters in the template.
 
 - The valid parts of the Cloud Formation template are parameters, outputs and resources.
 
