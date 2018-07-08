@@ -4,9 +4,19 @@
 
 - Default region is us-east-1
 
+- Fanout is one of the common pattern scenario’s when it comes to the combination of SNS and SQS. In this pattern, a message published to an SNS topic is distributed to a number of SQS queues in parallel. By using this pattern, you can build applications that take advantage parallel, asynchronous processing.
+
 ## VPC
 
 - There can be only one route table per subnet.
+
+## EBS
+
+- 10 GiB is the size limit for volumes in instances that are based on Amazon Instance Store backed AMI’s.
+
+- BundleInstance is used to Bundle an Amazon instance store-backed Windows instance.
+
+- The instance type and kernel for an EBS backed AMI can easily be changed as compared to an Instance store-backed AMI.
 
 ## IAM
 
@@ -18,6 +28,9 @@
 
 - AMI’s can only be shared within a region. To make them available across regions , you need to copy them across regions.
 
+## AS
+
+-  There are no charges for using the Autoscaling service.
 
 ## S3
 
@@ -28,6 +41,8 @@
 - Multi-Object Delete can be used to delete a large number of objects.
 
 - Parts of a multi-part upload will not be completed until the "complete" request has been called which puts all the parts of the file together.
+
+- The object creation REST APIs provide a request header, x-amz-server-side-encryption that you can use to request server-side encryption.
 
 - S3 object key names are stored lexicographically.
 
@@ -50,6 +65,8 @@
 - SNS guarantee message delivery to SQS.
 
 - A JSON object containing MessageId, unsubscribeURL, Subjec is the format of structured notification messages sent by Amazon SNSt, Message and other values.
+
+- Name, type, and value must not be empty or null and the message body shouldn't be empty or null either.
 
 - 100,000 is the maximum number of topics allowed per account in SNS.
 
@@ -117,6 +134,8 @@
 
 -  A local secondary index has the same partition key as the primary key and the global secondary index can have different partition and sort key.
 
+- Atomic counters can be used to increment or decrement the value of an existing attribute without interfering with other write requests.
+
 - DynamoDB uses conditional writes for consistency.
 
 - DynamoDB does not allow secondary index limit increase.
@@ -149,6 +168,8 @@
 
 - SWF tasks are assigned once and never duplicated.
 
+- You can have a maximum of 10,000 workflow and activity types (in total) that are either registered or deprecated in each domain. You can have a maximum of 100 Amazon SWF domains (including registered and deprecated domains) in your AWS account.
+
 - It guarantees delivery order of messages/tasks.
 
 - Video encoding is one of the major use cases for using SWF.
@@ -159,9 +180,17 @@
 
 - If long polling is enabled the reader will listen to the queue until a message is available or until timeout.
 
+- 1KB is the minimum value that can be configured for Amazon SQS MaximumMessageSize attribute.
+
+- There is no limit on the number of queues.
+
+- To enable long polling u need to set the value of ReceiveMessageWaitTimeSeconds to greater than 0 and less than or equal to 20 seconds.
+
 - SQS long polling costs the same that short polling
 
--  256 characters  is the maximum length of a topic name in SNS.
+- Amazon SQS long polling is a way to retrieve messages from your Amazon SQS queues. While the regular short polling returns immediately, even if the message queue being polled is empty, long polling doesn’t return a response until a message arrives in the message queue, or the long poll times out.
+
+- 256 characters  is the maximum length of a topic name in SNS.
 
 - Messages will be delivered one or more times, and message delivery order is indeterminate.
 
