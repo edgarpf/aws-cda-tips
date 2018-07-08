@@ -88,6 +88,8 @@
 
 - Set a smaller page size for the scan can be used to minimize the impact of a scan on a table’s provisioned throughput.
 
+- One DynamoDB strongly consistent read capacity unit is equal to two eventual consistent read per second.
+
 - An item stored in a DynamoDB can contain any number of attributes associated to it.
 
 - Strongly consistent reads uses more provisioned read throughput than eventually consistent reads.
@@ -99,6 +101,18 @@
 - Reads of a DynamoDB table are eventual consistency, unless you specify otherwise.
 
 - For write capacity, the rule is to divide the item size by 1KB.
+
+- Expressions can be used in DynamoDB as part of the Query API call to filter results based on the values of primary keys.
+
+- 100 is the maximum number of items that the BatchGetItem API retrieve from DynamoDB.
+
+- A global secondary index can becreated at the same time as the table creation
+
+- A Global Secondary Index can have different partition key and sort key from those of its base table.
+
+- 1 MB is the maximum limit of data that can be retrieved by a scan operation in DynamoDB.
+
+- A local secondary index has the same partition key as the primary key.
 
 - For read capacity, the rule is to divide the item size by 4KB. 
 
