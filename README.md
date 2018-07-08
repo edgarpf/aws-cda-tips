@@ -2,7 +2,7 @@
 
 ## General
 
-- Default region is us-east-1
+- Default region is us-east-1.
 
 - Fanout is one of the common pattern scenario’s when it comes to the combination of SNS and SQS. In this pattern, a message published to an SNS topic is distributed to a number of SQS queues in parallel. By using this pattern, you can build applications that take advantage parallel, asynchronous processing.
 
