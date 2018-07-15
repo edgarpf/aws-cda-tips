@@ -4,13 +4,25 @@
 
 - Default region is us-east-1.
 
+- It is possible to transfer a reserved instance from one Availability Zone to another.
+
 - Fanout is one of the common pattern scenario’s when it comes to the combination of SNS and SQS. In this pattern, a message published to an SNS topic is distributed to a number of SQS queues in parallel. By using this pattern, you can build applications that take advantage parallel, asynchronous processing.
 
 ## VPC
 
 - There can be only one route table per subnet.
 
+- A subnet can not be associated with multiple Access Contro Lists.
+
 - You can create 200 subnets per vpc.
+
+- You can have 5 VPC's per region.
+
+- You can attach only one internet gateway to a custom VPC.
+
+## ELB
+
+- You can have multiple SSL certificates (for multiple domain names) on a single Elastic Load Balancer.
 
 ## EBS
 
@@ -66,6 +78,8 @@
 
 - SNS guarantee message delivery to SQS.
 
+- It is push based.
+
 - A JSON object containing MessageId, unsubscribeURL, Subjec is the format of structured notification messages sent by Amazon SNSt, Message and other values.
 
 - Name, type, and value must not be empty or null and the message body shouldn't be empty or null either.
@@ -95,6 +109,8 @@
 - An item stored in a DynamoDB can contain any number of attributes associated to it.
 
 - Strongly consistent reads uses more provisioned read throughput than eventually consistent reads.
+
+- You can not select a specific Availability Zone in which to place your DynamoDB Table.
 
 - DynamoDB does not support cross table joins
 
