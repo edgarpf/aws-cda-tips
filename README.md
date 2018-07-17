@@ -100,7 +100,13 @@
 
 -  An atomic counter allows all write requests to be applied in the order they are received by incrementing or decrementing the attribute value.
 
+- You can increase Provisioned throughput limits by raising a ticket to AWS support
+
 - The BatchGetItem operation returns the attributes of one or more items from one or more tables.
+
+- A scan is not more efficient than a query in terms of performance.
+
+- BatchGetItem is the API call to retrieve multiple items from a DynamoDB table.
 
 - Set a smaller page size for the scan can be used to minimize the impact of a scan on a table’s provisioned throughput.
 
@@ -218,6 +224,8 @@
 
 ## SQS
 
+- SQS was the first service on the AWS platform
+
 - If long polling is enabled the reader will listen to the queue until a message is available or until timeout.
 
 - 1KB is the minimum value that can be configured for Amazon SQS MaximumMessageSize attribute.
@@ -230,7 +238,9 @@
 
 - Amazon SQS long polling is a way to retrieve messages from your Amazon SQS queues. While the regular short polling returns immediately, even if the message queue being polled is empty, long polling doesn’t return a response until a message arrives in the message queue, or the long poll times out.
 
-- 256 characters  is the maximum length of a topic name in SNS.
+- 256KB is the maximum size of SQS message.
+
+- 256 characters is the maximum length of a topic name in SNS.
 
 - Messages will be delivered one or more times, and message delivery order is indeterminate.
 
