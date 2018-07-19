@@ -224,8 +224,6 @@
 
 - Amazon SQS long polling is a way to retrieve messages from your Amazon SQS queues. While the regular short polling returns immediately, even if the message queue being polled is empty, long polling doesn’t return a response until a message arrives in the message queue, or the long poll times out.
 
-- 256KB is the maximum size of SQS message.
-
 - 256 characters is the maximum length of a topic name in SNS.
 
 - Messages will be delivered one or more times, and message delivery order is indeterminate.
