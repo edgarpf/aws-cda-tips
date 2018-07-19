@@ -102,7 +102,7 @@
 
 - The BatchGetItem operation returns the attributes of one or more items from one or more tables.
 
-- A scan is not more efficient than a query in terms of performance.
+- A query is more efficient than a scan in terms of performance.
 
 - BatchGetItem is the API call to retrieve multiple items from a DynamoDB table.
 
