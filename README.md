@@ -128,7 +128,7 @@
 
 - 100 is the maximum number of items that the BatchGetItem API retrieve from DynamoDB.
 
-- A global secondary index can becreated at the same time as the table creation
+- A global secondary index can be created at the same time as the table creation
 
 - A Global Secondary Index can have different partition key and sort key from those of its base table.
 
