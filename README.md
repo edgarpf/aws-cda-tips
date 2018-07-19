@@ -164,8 +164,6 @@
 
 - "ProvisionedThroughputExceededException" error is caused due to the following reason: You exceeded your maximum allowed provisioned throughput for a table or for one or more global secondary indexes. 
 
-- Each table can have up to 5 local secondary indexes.
-
 - There is no limit to a table size.
 
 - A Query operation uses the primary key of a table or a secondary index to directly access items from that table or index.
@@ -179,8 +177,6 @@
 - DynamoDB does not allow secondary index limit increase.
 
 - To help clients coordinate writes to data items, DynamoDB supports conditional writes for PutItem, DeleteItem, and UpdateItem operations. With a conditional write, an operation succeeds only if the item attributes meet one or more expected conditions; otherwise it returns an error.
-
-- 5 global security indexes are allowed.
 
 - All scalar data types can be indexed.
 
