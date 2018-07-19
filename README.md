@@ -144,8 +144,6 @@
 
 - Humans can not perform a decision task.
 
-- 256 is the maximum number of tables per region.
-
 - The cumulative number of tables and indexes in the CREATING, DELETING or UPDATING state cannot exceed 10.
 
 - One DynamoDB read capacity unit represents one strongly consistent read per second, for an item up to 4 KB in size. 
