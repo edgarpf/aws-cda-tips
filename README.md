@@ -74,8 +74,6 @@
 
 ## SNS
 
-- Name, type, and value must not be empty or null and the message body shouldn't be empty or null either.
-
 - SNS guarantee message delivery to SQS.
 
 - It is push based.
