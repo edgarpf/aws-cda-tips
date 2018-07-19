@@ -12,7 +12,7 @@
 
 - There can be only one route table per subnet.
 
-- A subnet can not be associated with multiple Access Contro Lists.
+- A subnet can not be associated with multiple Access Control Lists.
 
 - You can create 200 subnets per vpc.
 
