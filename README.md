@@ -190,8 +190,6 @@
 
 ## SWF
 
-- The maximum number of SWF domains allowed in an AWS account is 100.
-
 - A SWF workflow task or task execution can live up to 1 year.
 
 - Flow Framework helps in developing Amazon SWF based applications.
