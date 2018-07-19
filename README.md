@@ -138,8 +138,6 @@
 
 - For read capacity, the rule is to divide the item size by 4KB. 
 
-- A DynamoDB table can contain 5 local secondary indexes on a table.
-
 - DynamoDB uses optimistic concurrency control.
 
 - DynamoDB uses conditional writes for consistency.
