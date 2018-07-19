@@ -172,8 +172,6 @@
 
 - Atomic counters can be used to increment or decrement the value of an existing attribute without interfering with other write requests.
 
-- DynamoDB uses conditional writes for consistency.
-
 - DynamoDB does not allow secondary index limit increase.
 
 - To help clients coordinate writes to data items, DynamoDB supports conditional writes for PutItem, DeleteItem, and UpdateItem operations. With a conditional write, an operation succeeds only if the item attributes meet one or more expected conditions; otherwise it returns an error.
